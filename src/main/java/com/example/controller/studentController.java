@@ -59,4 +59,12 @@ public class studentController {
     public ResponseEntity<?> postuserRating(@RequestBody Countplates countplates){
         return ResponseEntity.ok(rateService.postRating(countplates));
     }
+
+
+    //for data store (testing purpose)
+    @PostMapping("/populate")
+    public ResponseEntity<?> populate(){
+        countplateservice.populate();
+        return ResponseEntity.ok("Working");
+    }
 }

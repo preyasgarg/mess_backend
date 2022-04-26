@@ -14,7 +14,6 @@ import javax.persistence.*;
 @Table
 public class Instruction {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private String inst;
+    private String instruction;
 }

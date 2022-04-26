@@ -25,7 +25,7 @@ public class managerController {
     }
 
 
-    @GetMapping("/getrating{id}")
+    @GetMapping("/getRating/{id}")
     public ResponseEntity<?> getRating(@PathVariable("id") Integer id){
         return ResponseEntity.ok(rateService.fetchRate(id));
     }

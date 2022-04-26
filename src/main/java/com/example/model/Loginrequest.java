@@ -7,16 +7,12 @@ import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 @Getter
 @Setter
-@ToString
-@Entity
-@Table
-public class Logintable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String username;
+
+public class Loginrequest {
+    private String email;
     private String password;
     private String role;
 }
