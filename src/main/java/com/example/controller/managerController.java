@@ -1,6 +1,6 @@
 package com.example.controller;
 
-import com.example.service.Countplateservice;
+import com.example.service.CountplateService;
 import com.example.service.RateService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class managerController {
 
     @Autowired
-    private Countplateservice countplateservice;
+    private CountplateService countplateservice;
 
     @Autowired
     private RateService rateService;

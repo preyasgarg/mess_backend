@@ -10,7 +10,7 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class Countplateservice {
+public class CountplateService {
 
     @Autowired
     private CountplatesRepository countplatesRepository;
@@ -33,8 +33,8 @@ public class Countplateservice {
 
     }
 
-    public List<Integer> getPlatehistory(){
-        return countplatesRepository.getcountofplateshistory();
+    public List<Integer> getPlatehistory(Integer studentid){
+        return countplatesRepository.getcountofplateshistory(studentid);
     }
 
     public Countplates postPlate(Countplates countplates){

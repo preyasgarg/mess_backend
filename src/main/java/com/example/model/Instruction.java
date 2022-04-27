@@ -15,5 +15,8 @@ import javax.persistence.*;
 public class Instruction {
     @Id
     private Integer id;
-    private String instruction;
+    private String instruction1;
+    private String instruction2;
+    private String instruction3;
+    private String instruction4;
 }

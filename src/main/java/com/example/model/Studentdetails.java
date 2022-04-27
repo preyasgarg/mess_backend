@@ -25,7 +25,7 @@ public class Studentdetails {
     private String role; //student,foodcom,manager
     private String course;
     private String rollno;
-    private Integer calories;
+
 
 
 }

@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 @Repository
 public interface StudentdetailsRepository extends JpaRepository<Studentdetails, Integer> {
 
@@ -27,4 +29,7 @@ public interface StudentdetailsRepository extends JpaRepository<Studentdetails, 
             nativeQuery = true
     )
     public Studentdetails findByRole(String role);
+
+    @Query(value = "select email from studentdetails",nativeQuery = true)
+    public List<String> getallemails();
 }
