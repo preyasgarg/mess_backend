@@ -3,6 +3,7 @@ package com.example.model;
 
 import lombok.*;
 
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -10,7 +11,7 @@ import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+
 @Getter
 @Setter
 @ToString
@@ -21,7 +22,9 @@ public class Countplates {
     @Id
     private Integer studentid;
     private Date date;
+
     private Integer breakfast;
+
     private Integer lunch;
     private Integer dinner;
     private Integer breakfastrating;
@@ -29,5 +32,7 @@ public class Countplates {
     private Integer dinnerrating;
     private String  feedback;
 
+    }
 
-}
+
+

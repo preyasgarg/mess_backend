@@ -19,7 +19,7 @@ public interface CountplatesRepository extends JpaRepository<Countplates, Intege
             nativeQuery = true)
     public Integer getcountofbreakfast();
 
-    @Query(value = "select sum(lunch) from countplates where date=curdate()",
+    @Query(value = "select sum(lunch) from countplates where date=curdate() ",
             nativeQuery = true)
     public Integer getcountoflunch();
 
@@ -28,15 +28,15 @@ public interface CountplatesRepository extends JpaRepository<Countplates, Intege
     public Integer getcountofdinner();
 
 
-    @Query(value = "select count(*) from countplates where breakfastrating=?1 and date=curdate()" ,
+    @Query(value = "select count(*) from countplates where breakfastrating=?1 " ,
         nativeQuery = true)
     public Integer getbybreakfastrating(Integer ratingNo);
 
-    @Query(value = "select count(*) from countplates where lunchrating=?1 and date=curdate()",
+    @Query(value = "select count(*) from countplates where lunchrating=?1",
             nativeQuery = true)
     public Integer getbylunchrating(Integer ratingNo);
 
-    @Query(value = "select count(*) from countplates where dinnerrating=?1 and date=curdate()",
+    @Query(value = "select count(*) from countplates where dinnerrating=?1",
 
             nativeQuery = true)
     public Integer getbydinnerrating(Integer ratingNo);
@@ -55,7 +55,7 @@ public interface CountplatesRepository extends JpaRepository<Countplates, Intege
     public List<Integer> getcountofplateshistory(Integer studentid);
 
     @Query(
-            value="select * from countplates c where c.studentid=?1 and date=curdate()",
+            value="select * from countplates c where c.studentid=?1",
             nativeQuery = true
     )
     public Countplates fetchCol(Integer req);
