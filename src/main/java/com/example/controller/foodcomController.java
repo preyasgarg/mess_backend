@@ -32,9 +32,9 @@ public class foodcomController {
 
 
 
-    @PostMapping("/updateInstruction")
-    public ResponseEntity<?> updateInstruction(@RequestBody Instruction instruction) {
-        return ResponseEntity.ok(instructionService.updatemessInstruction(instruction));
+    @PutMapping("/updateInstruction/{id}")
+    public ResponseEntity<?> updateInstruction(@RequestBody Instruction instruction,@PathVariable("id") Integer id) {
+        return ResponseEntity.ok(instructionService.updatemessInstruction(instruction,id));
     }
 
     @PostMapping("/updateMenu")
