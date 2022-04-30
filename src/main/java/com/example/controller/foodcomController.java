@@ -23,18 +23,15 @@ public class foodcomController {
     @Autowired
     private MenuService menuService;
 
-
     @PutMapping("/updateTime/{id}")
-    public Messtime updateTime(@RequestBody Messtime messtime,@PathVariable("id") Integer id) {
-        return timeService.updatemessTime(messtime,id);
+    public Messtime updateTime(@RequestBody Messtime messtime, @PathVariable("id") Integer id) {
+        return timeService.updatemessTime(messtime, id);
     }
 
 
-
-
     @PutMapping("/updateInstruction/{id}")
-    public ResponseEntity<?> updateInstruction(@RequestBody Instruction instruction,@PathVariable("id") Integer id) {
-        return ResponseEntity.ok(instructionService.updatemessInstruction(instruction,id));
+    public ResponseEntity<?> updateInstruction(@RequestBody Instruction instruction, @PathVariable("id") Integer id) {
+        return ResponseEntity.ok(instructionService.updatemessInstruction(instruction, id));
     }
 
     @PostMapping("/updateMenu")
@@ -42,5 +39,9 @@ public class foodcomController {
         return ResponseEntity.ok(menuService.updateFoodMenu(foodmenu));
     }
 
-
+    @PostMapping("/populatemesstime")
+    public ResponseEntity<?> populate() {
+        timeService.populatemesstime();
+        return ResponseEntity.ok("Working");
+    }
 }

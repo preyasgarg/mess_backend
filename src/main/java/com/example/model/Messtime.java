@@ -17,10 +17,10 @@ public class Messtime {
 
     @Id
     private Integer id;
-    private Float breakfastin;
-    private Float breakfastout;
-    private Float lunchin;
-    private Float lunchout;
-    private Float dinnerin;
-    private Float dinnerout;
+    private double breakfastin;
+    private double breakfastout;
+    private double lunchin;
+    private double lunchout;
+    private double dinnerin;
+    private double dinnerout;
 }

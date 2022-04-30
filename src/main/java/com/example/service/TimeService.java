@@ -1,10 +1,12 @@
 package com.example.service;
 
 import com.example.dao.MesstimeRepository;
+import com.example.model.Countplates;
 import com.example.model.Messtime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -35,5 +37,11 @@ public class TimeService {
     }
     public List<Messtime> fetchTime(){
         return messtimeRepository.fetch();
+    }
+
+
+    public void populatemesstime(){
+        Messtime messtime= new Messtime(1,2.3,2.4,3.5,5.6,5.6,4.5);
+        messtimeRepository.save(messtime);
     }
 }
