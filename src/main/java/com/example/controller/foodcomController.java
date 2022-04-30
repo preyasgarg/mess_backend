@@ -40,7 +40,7 @@ public class foodcomController {
     }
 
     @PostMapping("/populatemesstime")
-    public ResponseEntity<?> populate() {
+    public ResponseEntity<?> populatemesstime() {
         timeService.populatemesstime();
         return ResponseEntity.ok("Working");
     }
