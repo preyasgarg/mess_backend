@@ -19,7 +19,7 @@ public interface CountplatesRepository extends JpaRepository<Countplates, Intege
             nativeQuery = true)
     public Integer getcountofbreakfast();
 
-    @Query(value = "select sum(lunch) from countplates where date=curdate() ",
+    @Query(value = "select sum(lunch) from countplates   ",
             nativeQuery = true)
     public Integer getcountoflunch();
 
@@ -48,8 +48,9 @@ public interface CountplatesRepository extends JpaRepository<Countplates, Intege
 //    public List<Integer> getcountofplateshistory();
 
 
+
     @Query(
-            value="select breakfast,lunch,dinner from countplates where studentid=?1",
+            value="select date,breakfast,lunch,dinner from countplates where studentid=?1",
             nativeQuery = true
     )
     public List<Integer> getcountofplateshistory(Integer studentid);

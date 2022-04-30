@@ -23,10 +23,14 @@ public class foodcomController {
     @Autowired
     private MenuService menuService;
 
-    @PostMapping("/updateTime")
-    public ResponseEntity<?> updateTime(@RequestBody Messtime messtime) {
-        return ResponseEntity.ok(timeService.updatemessTime(messtime));
+
+    @PutMapping("/updateTime/{id}")
+    public Messtime updateTime(@RequestBody Messtime messtime,@PathVariable("id") Integer id) {
+        return timeService.updatemessTime(messtime,id);
     }
+
+
+
 
     @PostMapping("/updateInstruction")
     public ResponseEntity<?> updateInstruction(@RequestBody Instruction instruction) {
